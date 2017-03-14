@@ -14,8 +14,8 @@ $configs = include('/home/webmaster/wp-config-files/payment_congif.php');
 // podio app id 18049580
 // pdio redirect url = https://aiesec.org.mx
 
-Podio::setup('aiesec-mexico', 'H1m3TpwjqotvYxwJzTcXtNJVnPJP47UE6B825iOnS2VzEsmlHd9222c3yUcOGWZi');
-var_dump( Podio::authenticate_with_app(18049580,'7aee38e461354490b1b9ef5e1219e6a6'));
+Podio::setup('aiesec-mexico', podio key);
+
 
 
 
@@ -66,8 +66,8 @@ function send_mail($text){
 		$mail->IsHTML(true);
 		//$mail->Username = $configs["mailing_adress"];
 		//$mail->Password = $configs["mailing_adress_pass"];
-		$mail->Username = 'esuarez@aiesec.org.mx';
-		$mail->Password = '2InTeLi7';
+		$mail->Username = mail
+		$mail->Password = pass
 		$mail->SetFrom('esuarez@aiesec.org.mx','AIESEC MEXICO');
 		//$mail->SetFrom($configs["mailing_adress"],'AIESEC MEXICO');
 		$mail->Subject = "Donativo a AIESEC Mexico A.C.";

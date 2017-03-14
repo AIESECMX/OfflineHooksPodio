@@ -84,8 +84,8 @@ function send_mail($email,$text){
 		$mail->IsHTML(true);
 		//$mail->Username = htmlspecialchars($configs['mail_account']);
 		//$mail->Password = htmlspecialchars($configs['mail_pass']);
-		$mail->Username = 'noreply@aiesec.org.mx';
-		$mail->Password = 'AIESEC123';
+		$mail->Username = mail hea
+		$mail->Password = pass here
 		$mail->SetFrom('noreply@aiesec.org.mx','AIESEC MEXICO');
 		//$mail->SetFrom($configs["mailing_adress"],'AIESEC MEXICO');
 		$mail->Subject = "Tu experiencia con AIESEC";

@@ -1,19 +1,17 @@
 <?php
 
-include_once '/lib/podio-php-4.3.0/PodioAPI.php';
+include_once '/bin/podio-php-4.3.0/PodioAPI.php';
 //limonadue
-require_once '/lib/limonade-master/lib/limonade.php';
-require '/home/webmaster/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-$configs = include('/home/webmaster/wp-config-files/payment_congif.php');
+require_once '/bin/limonade-master/lib/limonade.php';
+require '/bin/PHPMailer-master/PHPMailerAutoload.php';
+$configs = include('../../config.php');
 
 
 
 
 
-
-
-Podio::setup('aiesec-mexico', 'H1m3TpwjqotvYxwJzTcXtNJVnPJP47UE6B825iOnS2VzEsmlHd9222c3yUcOGWZi');
-Podio::authenticate_with_app(17706408,'e0078851f0d64c1aac973f5c2667e743');
+Podio::setup($configs['podio_domain'], $configs['podio_key']);
+Podio::authenticate_with_app($configs['podio_app_ogt'],$configs['podio_app_ogt_key']);
 
 create_hook();
 ////creates a hook that reacts to a field update

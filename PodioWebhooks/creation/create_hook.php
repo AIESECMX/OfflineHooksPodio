@@ -1,10 +1,11 @@
 <?php
 
-include_once '/lib/podio-php-4.3.0/PodioAPI.php';
+
+include_once '/bin/podio-php-4.3.0/PodioAPI.php';
 //limonadue
-require_once '/lib/limonade-master/lib/limonade.php';
-require '/home/webmaster/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-$configs = include('/home/webmaster/wp-config-files/payment_congif.php');
+require_once '/bin/limonade-master/lib/limonade.php';
+require '/bin/PHPMailer-master/PHPMailerAutoload.php';
+$configs = include('../../config.php');
 
 
 

@@ -1,20 +1,12 @@
 <?php
 
-include_once '/lib/podio-php-4.3.0/PodioAPI.php';
+
+include_once '/bin/podio-php-4.3.0/PodioAPI.php';
 //limonadue
-require_once '/lib/limonade-master/lib/limonade.php';
-require '/home/webmaster/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+require_once '/bin/limonade-master/lib/limonade.php';
+require '/bin/PHPMailer-master/PHPMailerAutoload.php';
+$configs = include('../../config.php');
 
-
-$configs = include('/home/webmaster/offline_opperations/offline_webhooks_config.php');
-
-
-
-
-
-// Podio hook validation 
-// podio app id 18049580
-// pdio redirect url = https://aiesec.org.mx
 
 Podio::setup($configs['podio_domain'], $configs['podio_key']);
 Podio::authenticate_with_app($configs['podio_app_ogv'],$configs['podio_app_ogv_key']);
